@@ -20,6 +20,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 30px;
+  padding: 20px 0px;
   text-align: center;
   margin: 20px 0px;
   overflow-x: scroll;
@@ -34,10 +35,13 @@
   width: 7.5vw;
   min-width: 80px;
   border-radius: 50%;
-  transition: 0.2s ease-in-out;
+  transition: 0.16s ease-in-out;
   cursor: pointer;
 }
 
+.explore-menu-list-item img:hover{
+  transform: scale(1.1);
+}
 
 .explore-menu-list-item p{
   font-size: max(1.4vw,16px);

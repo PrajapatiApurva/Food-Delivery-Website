@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ onSetShowLogin }) => {
+  
   const [menu, setMenu] = useState("home");
+  const { cartItemList } = useContext(StoreContext);
 
   return (
     <div className="navbar">
@@ -47,7 +50,7 @@ const Navbar = ({ onSetShowLogin }) => {
           <Link to="/cart">
             <img src={assets.basket_icon} alt="cart" />
           </Link>
-          <div className="dot"></div>
+          <div className={Object.keys(cartItemList).length === 0 ? "" : "dot"}></div>
         </div>
         <button onClick={() => onSetShowLogin(true)} className="navbar-button">
           Sign In

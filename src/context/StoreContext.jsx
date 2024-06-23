@@ -27,16 +27,21 @@ const StoreContextProvider = ({ children }) => {
     }
   }
 
-  useEffect(()=>{
-    console.log(cartItemList);
-  },[cartItemList]);
-
+  const getTotalCartAmount = () => {
+    let total = 0;
+    for (const food in cartItemList) {
+      let foodInfo = food_list.find((item) => item._id === food);
+      total += foodInfo.price * cartItemList[food];
+    }
+    return total;
+  }
   const contextValue = {
     food_list,
     cartItemList,
     setCartItemList,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    getTotalCartAmount
   };
 
   return (

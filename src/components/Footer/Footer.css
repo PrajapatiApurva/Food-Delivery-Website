@@ -66,3 +66,15 @@
   margin-top: 20px;
   background-color: gray;
 }
+
+@media (max-width: 750px){
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-copyright{
+    text-align: center;
+  }
+}

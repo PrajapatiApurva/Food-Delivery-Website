@@ -1,33 +1,34 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
-.navbar li{
+.navbar li {
   cursor: pointer;
 }
 
-.navbar .logo{
+.navbar .logo {
   width: 150px;
-  height: 70px;
+  height: 60px;
 }
 
-.navbar-menu{
+.navbar-menu {
   display: flex;
   list-style: none;
   gap: 20px;
-  color:#475b9b;
+  color: #475b9b;
   font-size: 18px;
 }
 
-.navbar-right{
+.navbar-right {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
-.navbar button{
+.navbar button {
   background: transparent;
   font-size: 16px;
   color: #475b9b;
@@ -38,22 +39,22 @@
   transition: all 0.3s ease;
 }
 
-.navbar button:hover{
+.navbar button:hover {
   background: #ff3f1d;
   color: white;
 }
 
-.navbar .active{
+.navbar .active {
   color: #ff3f1d;
   padding-bottom: 2px;
   border-bottom: 2px solid #ff2600;
 }
 
-.navbar-search-icon{
+.navbar-search-icon {
   position: relative;
 }
 
-.navbar-search-icon .dot{
+.navbar-search-icon .dot {
   position: absolute;
   top: -8px;
   right: -8px;
@@ -61,4 +62,49 @@
   min-height: 10px;
   background: #ff3f1d;
   border-radius: 50%;
+}
+
+@media (max-width: 1050px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar-menu {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .navbar-right {
+    gap: 30px;
+  }
+  .navbar-right .img {
+    width: 22px;
+  }
+  .navbar-right button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar-menu {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-right .img {
+    width: 20px;
+  }
+  .navbar-right button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-menu {
+    display: none;
+  }
 }

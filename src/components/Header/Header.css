@@ -40,3 +40,28 @@
   border-radius: 24px;
   transition: all 0.3s ease;
 }
+
+.header-button:hover{
+  background: #ff2600;
+  color: white;
+}
+
+@media (max-width: 1050px){
+  .header-contents{
+    max-width: 48%;
+  }
+} 
+
+@media (max-width: 750px){
+  .header-contents{
+    max-width: 64%;
+  }
+
+  .header-contents p{
+    display: none;
+  }
+
+  .header-contents button{
+    padding: 2vw 4vw;
+  }
+}

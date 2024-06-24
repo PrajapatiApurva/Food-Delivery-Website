@@ -67,4 +67,8 @@
     max-width: 100%;
     font-size: 14px;
   }
+  .explore-menu-list-item img{
+    width: 80%;
+    height: 80%;
+  }
 }

@@ -40,3 +40,9 @@
 .place-order .cart-total button{
   margin-top: 40px;
 }
+
+@media (max-width: 750px){
+  .place-order{
+    flex-direction: column-reverse;
+  }
+}
